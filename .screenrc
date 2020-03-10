@@ -1,0 +1,7 @@
+# the following two lines give a two-line status, with the current window highlighted
+hardstatus alwayslastline
+#
+hardstatus string '%{= kG}[%H%? %1`%?%{g}][%{= bw}%-w%{gk} %n*%t%?(%u)%? %{-}%+w %=%{g}%{= kG}][%{W}%D %m/%d %c%{g}]'
+
+# huge scrollback buffer
+defscrollback 10000
