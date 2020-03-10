@@ -1,26 +1,33 @@
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-call vundle#end()
-filetype plugin indent on
-
+set bg=dark
 set shiftwidth=2
 set tabstop=2
-set scrolloff=5
+set filetype=on
 syntax on
 set hlsearch
 set number
-set autoindent
 set smartindent
-set background=dark
-colorscheme solarized
+set autoindent
+set scrolloff=10
+set modeline
 
-set colorcolumn=80
+" Set the color of the line my cursor is on to be a dark gray
+" https://jonasjacek.github.io/colors/
+set cursorline
+hi CursorLine cterm=NONE ctermbg=234
+
+"set colorcolumn=80
 hi ColorColumn ctermbg=DarkBlue
 
-""ycm config
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_confirm_extra_conf = 0
+"Colors for diff
+highlight DiffAdd ctermfg=Black ctermbg=Green
+highlight DiffDelete ctermfg=Black ctermbg=Red
+highlight DiffChange ctermfg=white ctermbg=DarkCyan
+highlight DiffText ctermfg=white ctermbg=Magenta
+
+"Colors for visual selection
+hi Visual ctermbg=Cyan ctermfg=Black
+
+"hi CursorLine ctermbg=DarkBlue ctermfg=none guibg=none guifg=none
+"
+nnoremap <silent> <Leader>> :vertical resize +5<CR>
+nnoremap <silent> <Leader>< :vertical resize -5<CR>
